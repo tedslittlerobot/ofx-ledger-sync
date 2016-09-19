@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CEA3B701D8FE5E300D71FF2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B6F1D8FE5E300D71FF2 /* main.swift */; };
+		0CEA3B771D8FF2D500D71FF2 /* OFXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		0CEA3B6C1D8FE5E300D71FF2 /* ofx-ledger-sync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ofx-ledger-sync"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEA3B6F1D8FE5E300D71FF2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFXParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				0CEA3B6F1D8FE5E300D71FF2 /* main.swift */,
+				0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */,
 			);
 			path = "ofx-ledger-sync";
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEA3B771D8FF2D500D71FF2 /* OFXParser.swift in Sources */,
 				0CEA3B701D8FE5E300D71FF2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
