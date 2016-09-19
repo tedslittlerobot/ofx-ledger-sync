@@ -13,7 +13,13 @@ print("Hello, World!")
 // For now, arg 1 is the ofx file
 dump(CommandLine.arguments);
 
-let parser = OFXParser(xmlContents: "")
+let location = Bundle.main.path(forResource: "sample-file", ofType: "ofx")
+
+let fileContent = try String.init(contentsOfFile: location!, encoding: String.Encoding.utf8)
+
+let parser = OFXParser(xmlContents: fileContent.data(using: String.Encoding.utf8)!)
+
+dump(parser.transactions())
 
 // @todo - get file to read from / stdin
 // @todo - get ledger file to output to / stdout

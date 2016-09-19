@@ -12,22 +12,26 @@ import Foundation
 
 struct Transaction {}
 
-class OFXParser {
+class OFXParser : NSObject, XMLParserDelegate {
     
-    var stringData : String
+    var xmlData : Data
     var cachedTransactions : Array<Transaction>
     var parser : XMLParser
     
-    init(xmlContents : String) {
-        stringData = xmlContents
-        parser = XMLParser()
+    init(xmlContents : Data) {
+        xmlData = xmlContents
+        parser = XMLParser(data: xmlContents)
         cachedTransactions = []
+        super.init()
     }
     
     func transactions()->Array<Transaction> {
         if !cachedTransactions.isEmpty {
             return cachedTransactions
         }
+        parser.delegate = self
+        parser.parse()
+        dump(parser.parserError)
         
         return [];
     }
@@ -36,5 +40,15 @@ class OFXParser {
         for transaction in transactions() {
             action(transaction)
         }
+    }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        dump("start element \(elementName)")
+    }
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        dump("  found chars: \(string)")
+    }
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        dump("end element \(elementName)")
     }
 }

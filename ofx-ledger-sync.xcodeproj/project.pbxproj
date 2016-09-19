@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CEA3B701D8FE5E300D71FF2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B6F1D8FE5E300D71FF2 /* main.swift */; };
 		0CEA3B771D8FF2D500D71FF2 /* OFXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */; };
+		0CEA3B7A1D9000DA00D71FF2 /* sample-file.ofx in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CEA3B781D8FFF3D00D71FF2 /* sample-file.ofx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,12 +22,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		0CEA3B791D9000CE00D71FF2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0CEA3B7A1D9000DA00D71FF2 /* sample-file.ofx in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0CEA3B6C1D8FE5E300D71FF2 /* ofx-ledger-sync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ofx-ledger-sync"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEA3B6F1D8FE5E300D71FF2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFXParser.swift; sourceTree = "<group>"; };
+		0CEA3B781D8FFF3D00D71FF2 /* sample-file.ofx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sample-file.ofx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			children = (
 				0CEA3B6E1D8FE5E300D71FF2 /* ofx-ledger-sync */,
 				0CEA3B6D1D8FE5E300D71FF2 /* Products */,
+				0CEA3B781D8FFF3D00D71FF2 /* sample-file.ofx */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +88,7 @@
 				0CEA3B681D8FE5E300D71FF2 /* Sources */,
 				0CEA3B691D8FE5E300D71FF2 /* Frameworks */,
 				0CEA3B6A1D8FE5E300D71FF2 /* CopyFiles */,
+				0CEA3B791D9000CE00D71FF2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -91,6 +105,9 @@
 		0CEA3B641D8FE5E300D71FF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = tedslittlerobot;
