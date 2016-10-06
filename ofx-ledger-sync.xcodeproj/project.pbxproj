@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C932B5E1DA686770076BBF3 /* ast nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B5D1DA686770076BBF3 /* ast nodes.swift */; };
+		0C932B601DA6868D0076BBF3 /* nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B5F1DA6868D0076BBF3 /* nodes.swift */; };
+		0C932B621DA686AF0076BBF3 /* OfxAstParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B611DA686AF0076BBF3 /* OfxAstParser.swift */; };
+		0C932B641DA686CC0076BBF3 /* OfxNodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B631DA686CC0076BBF3 /* OfxNodeParser.swift */; };
+		0C932B661DA686E90076BBF3 /* OfxXmlFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C932B651DA686E90076BBF3 /* OfxXmlFormatter.swift */; };
 		0CEA3B701D8FE5E300D71FF2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B6F1D8FE5E300D71FF2 /* main.swift */; };
 		0CEA3B771D8FF2D500D71FF2 /* OFXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */; };
 		0CEA3B7A1D9000DA00D71FF2 /* sample-file.ofx in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CEA3B781D8FFF3D00D71FF2 /* sample-file.ofx */; };
@@ -35,6 +40,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C932B5D1DA686770076BBF3 /* ast nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ast nodes.swift"; sourceTree = "<group>"; };
+		0C932B5F1DA6868D0076BBF3 /* nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nodes.swift; sourceTree = "<group>"; };
+		0C932B611DA686AF0076BBF3 /* OfxAstParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfxAstParser.swift; sourceTree = "<group>"; };
+		0C932B631DA686CC0076BBF3 /* OfxNodeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfxNodeParser.swift; sourceTree = "<group>"; };
+		0C932B651DA686E90076BBF3 /* OfxXmlFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfxXmlFormatter.swift; sourceTree = "<group>"; };
 		0CEA3B6C1D8FE5E300D71FF2 /* ofx-ledger-sync */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ofx-ledger-sync"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEA3B6F1D8FE5E300D71FF2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OFXParser.swift; sourceTree = "<group>"; };
@@ -52,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C932B671DA687A80076BBF3 /* Ofx Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				0C932B651DA686E90076BBF3 /* OfxXmlFormatter.swift */,
+				0C932B631DA686CC0076BBF3 /* OfxNodeParser.swift */,
+				0C932B611DA686AF0076BBF3 /* OfxAstParser.swift */,
+				0C932B5F1DA6868D0076BBF3 /* nodes.swift */,
+				0C932B5D1DA686770076BBF3 /* ast nodes.swift */,
+			);
+			name = "Ofx Parsing";
+			sourceTree = "<group>";
+		};
 		0CEA3B631D8FE5E300D71FF2 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +96,7 @@
 			children = (
 				0CEA3B6F1D8FE5E300D71FF2 /* main.swift */,
 				0CEA3B761D8FF2D500D71FF2 /* OFXParser.swift */,
+				0C932B671DA687A80076BBF3 /* Ofx Parsing */,
 			);
 			path = "ofx-ledger-sync";
 			sourceTree = "<group>";
@@ -140,8 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C932B661DA686E90076BBF3 /* OfxXmlFormatter.swift in Sources */,
+				0C932B601DA6868D0076BBF3 /* nodes.swift in Sources */,
+				0C932B621DA686AF0076BBF3 /* OfxAstParser.swift in Sources */,
 				0CEA3B771D8FF2D500D71FF2 /* OFXParser.swift in Sources */,
 				0CEA3B701D8FE5E300D71FF2 /* main.swift in Sources */,
+				0C932B5E1DA686770076BBF3 /* ast nodes.swift in Sources */,
+				0C932B641DA686CC0076BBF3 /* OfxNodeParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +299,7 @@
 				0CEA3B751D8FE5E300D71FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
