@@ -10,11 +10,11 @@ import Foundation
 
 class Node {
     var tag : String
-    
+
     var parentNode : Node?
-    
+
     var children : [Node] = []
-    
+
     init(name : String, parent : Node?) {
         tag = name
         parentNode = parent
@@ -31,7 +31,7 @@ class RootNode : ObjectNode {
 
 class TextNode : Node {
     var content : String
-    
+
     init(name : String, parent : Node , contents : String) {
         content = contents
         super.init(name: name, parent: parent)

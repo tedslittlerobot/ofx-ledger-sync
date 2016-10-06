@@ -13,31 +13,31 @@ import Foundation
 struct Transaction {}
 
 class OFXParser : NSObject {
-    
+
     var xmlData : String
-    
+
     init(xmlContents : String) {
         xmlData = xmlContents
         super.init()
     }
-    
+
     func transactions()->[Transaction] {
-        
+
         let ast = OfxAst.init(xmlContents: xmlData)
-        
+
         let parser = OfxNodeParser(withAst: ast)
-        
+
         print(parser.xml())
-        
+
         return [];
     }
-    
+
     func forEach(action : (Transaction)->()) {
         for transaction in transactions() {
             action(transaction)
         }
     }
-    
+
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         dump("start element \(elementName)")
     }
