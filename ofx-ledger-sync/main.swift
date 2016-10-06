@@ -8,18 +8,16 @@
 
 import Foundation
 
-print("Hello, World!")
-
 // For now, arg 1 is the ofx file
-dump(CommandLine.arguments);
+//dump(CommandLine.arguments);
 
 let location = Bundle.main.path(forResource: "sample-file", ofType: "ofx")
 
 let fileContent = try String.init(contentsOfFile: location!, encoding: String.Encoding.utf8)
 
-let parser = OFXParser(xmlContents: fileContent.data(using: String.Encoding.utf8)!)
+let parser = OFXParser(xmlContents: fileContent)
 
-dump(parser.transactions())
+parser.transactions()
 
 // @todo - get file to read from / stdin
 // @todo - get ledger file to output to / stdout
